@@ -5,10 +5,10 @@ module com.bancodequestoes {
     requires mysql.connector.java;
 
 
-    opens com.bancodequestoes to javafx.fxml;
-    exports com.bancodequestoes;
-    exports com.bancodequestoes.controllers;
-    opens com.bancodequestoes.controllers to javafx.fxml;
-    exports com.bancodequestoes.application;
-    opens com.bancodequestoes.application to javafx.fxml;
+    opens com.bdq to javafx.fxml;
+    exports com.bdq;
+    exports com.bdq.controllers;
+    opens com.bdq.controllers to javafx.fxml;
+    exports com.bdq.application;
+    opens com.bdq.application to javafx.fxml;
 }

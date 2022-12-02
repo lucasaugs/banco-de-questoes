@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/banco-de-questoes.iml" filepath="$PROJECT_DIR$/banco-de-questoes.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bdq.iml" filepath="$PROJECT_DIR$/bdq.iml" />
     </modules>
   </component>
 </project>
