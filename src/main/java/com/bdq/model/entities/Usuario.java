@@ -6,11 +6,13 @@ public class Usuario {
   private Boolean usrAluno;
   private String nome;
   private String senha;
+  private String cpf;
 
-  public Usuario(String nomeUsr, Integer idUsr, Boolean usrAluno) {
+  public Usuario(String nomeUsr, Integer idUsr, Boolean usrAluno, String cpf) {
     this.nomeUsr = nomeUsr;
     this.idUsr = idUsr;
     this.usrAluno = usrAluno;
+    this.cpf = cpf;
   }
 
   public Usuario() {}
