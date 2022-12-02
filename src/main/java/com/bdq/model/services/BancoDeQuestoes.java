@@ -24,4 +24,13 @@ public class BancoDeQuestoes {
 			dao.insertRelatorio(questao);
 		else dao.updateRelatorio(questao);
 	}
+	
+	public static Double calculaMedia(List<Double> lista) {
+		Double media = 0.0;
+		for(Double item : lista) {
+			media+=item;
+		}
+		media/=lista.size();
+		return media;
+	}
 }
