@@ -3,6 +3,7 @@ module com.bancodequestoes {
     requires javafx.fxml;
     requires java.sql;
     requires mysql.connector.java;
+	requires org.junit.jupiter.api;
 
 
     opens com.bdq to javafx.fxml;
