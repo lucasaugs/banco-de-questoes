@@ -5,7 +5,6 @@ Project for the discipline of Software Engineering II (2022.2) that consists in 
 Lucas Augusto da Silva Gonçalves;<br />
 Ailton Vinaud Junior;<br />
 Igor Roiz Teixeira.<br />
-Lucas Augusto
 
 # Sobre as tecnologias:
 O trabalho foi feito usando o padrão de arquitetura MVC (Model View Controller), que é uma arquitetura que simplifica a troca de informações entre a interface e o banco de dados. É uma arquitetura separada em três camadas principais:Modelo, Controlador e Interface. Adicionamos uma camada extra mais abaixo com o acesso ao banco de dados, de forma que esse acesso possa ser controlado separado do resto do sistema.
