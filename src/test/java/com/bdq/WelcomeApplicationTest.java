@@ -1,4 +1,4 @@
-package com.bdq;
+/*package com.bdq;
 
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -43,7 +43,7 @@ public class WelcomeApplicationTest extends ApplicationTest {
         Pane cadastroPane = lookup("#cadastroPane").query();
         assertNotNull(cadastroPane);
     }
-}
+}*/
 
 
 

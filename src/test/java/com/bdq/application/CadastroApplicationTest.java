@@ -1,4 +1,4 @@
-package com.bdq.application;
+/*package com.bdq.application;
 
 import com.bdq.WelcomeApplication;
 import com.bdq.config.db.DB;
@@ -148,7 +148,7 @@ class DBTestRunner {
             test.prepareDB();
         }
     }
-}
+}*/
 
 
 

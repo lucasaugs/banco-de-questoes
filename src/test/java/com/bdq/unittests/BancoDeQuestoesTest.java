@@ -1,18 +1,19 @@
 package com.bdq.unittests;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+
+import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import com.bdq.model.services.BancoDeQuestoes;
 
-class BancoDeQuestoesTest {
+public class BancoDeQuestoesTest {
 
 	@Test
-	void calculaMedia() {
+	public void calculaMedia() {
 		List<Double> lista = new ArrayList<>() {
 			{
 				add(5.5);
