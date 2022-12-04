@@ -1,6 +1,5 @@
 package com.bdq.unittests;
 
-
 import static org.junit.Assert.assertEquals;
 
 import java.util.ArrayList;
@@ -20,18 +19,18 @@ public class BancoDeQuestoesTest {
 				add(6.3);
 				add(7.0);
 			}
-			
+
 		};
-		
+
 		Double resultado = BancoDeQuestoes.calculaMedia(lista);
-		assertEquals(6.27,resultado,0.01);
+		assertEquals(6.27, resultado, 0.01);
 	}
-	
+
 	@Test
 	public void calculaMediaListaVazia() {
 		List<Double> lista = new ArrayList<>();
 		Double resultado = BancoDeQuestoes.calculaMedia(lista);
-		assertEquals(0.0,resultado,0.0);
+		assertEquals(0.0, resultado, 0.0);
 	}
 
 }

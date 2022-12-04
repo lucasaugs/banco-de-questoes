@@ -4,14 +4,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Questao {
-	
+
 	private Integer idQuestao;
 	private String enunciado;
 	private String resposta;
 	private Boolean publica;
 	private List<Tema> temas = new ArrayList<>();
 	private Relatorio relatorio;
-	
+
 	public Questao(Integer idQuestao, String enunciado, String resposta, Boolean publica, List<Tema> temas) {
 		this.idQuestao = idQuestao;
 		this.enunciado = enunciado;
@@ -20,8 +20,9 @@ public class Questao {
 		this.temas = temas;
 		relatorio = null;
 	}
-	
-	public Questao() {}
+
+	public Questao() {
+	}
 
 	public Integer getIdQuestao() {
 		return idQuestao;
@@ -58,16 +59,24 @@ public class Questao {
 	public List<Tema> getTemas() {
 		return temas;
 	}
-	
+
 	public void addTema(Tema tema) {
 		temas.add(tema);
 	}
-	
+
 	public void setRelatorio(Relatorio relatorio) {
 		this.relatorio = relatorio;
 	}
 
 	public Relatorio getRelatorio() {
 		return relatorio;
+	}
+
+	public boolean questaoTemTema(Tema tema) {
+		for (Tema item : temas) {
+			if (item.equals(tema))
+				return true;
+		}
+		return false;
 	}
 }
