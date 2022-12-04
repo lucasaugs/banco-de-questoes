@@ -1,5 +1,6 @@
-/*package com.bdq.application;
+package com.bdq.application;
 
+import static org.junit.Assert.*;
 import com.bdq.WelcomeApplication;
 import com.bdq.config.db.DB;
 import com.bdq.config.db.DbException;
@@ -10,25 +11,19 @@ import javafx.scene.control.DialogPane;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.stage.Stage;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.ParameterizedTest;
-import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.After;
+import org.junit.Test;
 import org.testfx.api.FxToolkit;
-import org.testfx.framework.junit5.ApplicationTest;
+import org.testfx.framework.junit.ApplicationTest;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-import javafx.scene.control.TextField;
 
 import java.util.Objects;
 import java.util.concurrent.TimeoutException;
 
-import static org.junit.jupiter.api.Assertions.*;
-
-
-class CadastroApplicationTest extends ApplicationTest {
+public class SuccessfulCadastroApplicationTest extends ApplicationTest {
 
     @Override
     public void start (Stage stage) throws Exception {
@@ -38,29 +33,11 @@ class CadastroApplicationTest extends ApplicationTest {
         stage.toFront();
     }
 
-    @AfterEach
-    void tearDown() throws TimeoutException {
+    @After
+    public void tearDown() throws TimeoutException {
         FxToolkit.hideStage();
         release(new KeyCode[]{});
         release(new MouseButton[]{});
-    }
-
-    @ParameterizedTest
-    @MethodSource("fieldsToWrite")
-    public void testWriteOnField (String fxid, String value) {
-        clickOn(fxid).write(value);
-        assertEquals(((TextField) lookup(fxid).query()).getText(), value);
-    }
-
-    @ParameterizedTest
-    @MethodSource("badInputs")
-    public void testBadCadastro(String nameInput, String userInput, String senhaInput) {
-        clickOn("#nome").write(nameInput);
-        clickOn("#login").write(userInput);
-        clickOn("#senha").write(senhaInput);
-        clickOn("#btEntrar");
-        DialogPane dialogPane = lookup(".dialog-pane").query();
-        assertEquals(dialogPane.getContentText(), "Há campos não preenchidos ou nome indisponivel!");
     }
 
     @Test
@@ -115,24 +92,8 @@ class CadastroApplicationTest extends ApplicationTest {
             }
         });
     }
-
-    private static Object[] fieldsToWrite () {
-        return new Object[]{
-                new Object[] {"#nome", "TestName"},
-                new Object[] {"#login", "TestLogin"},
-                new Object[] {"#senha", "TestPwd"},
-        };
-    }
-
-    private static Object[] badInputs () {
-        return new Object[]{
-                new Object[] {"Igor", "Igor", ""},
-                new Object[] {"", "Igor", "1234"},
-                new Object[] {"Igor", "", "1234"},
-                new Object[] {"Igor", "Igor", "1234"},
-        };
-    }
 }
+
 
 interface DBTest {
     void prepareDB();
@@ -148,9 +109,4 @@ class DBTestRunner {
             test.prepareDB();
         }
     }
-}*/
-
-
-
-
-
+}

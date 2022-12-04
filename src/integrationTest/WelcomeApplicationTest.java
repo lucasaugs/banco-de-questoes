@@ -1,5 +1,8 @@
-/*package com.bdq;
+package com.bdq;
 
+import org.junit.After;
+
+import static org.junit.Assert.*;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -7,14 +10,12 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.input.MouseButton;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
-import static org.junit.jupiter.api.Assertions.*;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.AfterEach;
+
+import org.junit.Test;
 import org.testfx.api.FxToolkit;
-import org.testfx.framework.junit5.ApplicationTest;
-
-
+import org.testfx.framework.junit.ApplicationTest;
 public class WelcomeApplicationTest extends ApplicationTest {
+
     @Override
     public void start (Stage stage) throws Exception {
         Parent fxmlLoader = FXMLLoader.load(WelcomeApplication.class.getResource("view/welcome.fxml"));
@@ -23,7 +24,7 @@ public class WelcomeApplicationTest extends ApplicationTest {
         stage.toFront();
     }
 
-    @AfterEach
+    @After
     public void tearDown () throws Exception {
         FxToolkit.hideStage();
         release(new KeyCode[]{});
@@ -43,7 +44,5 @@ public class WelcomeApplicationTest extends ApplicationTest {
         Pane cadastroPane = lookup("#cadastroPane").query();
         assertNotNull(cadastroPane);
     }
-}*/
 
-
-
+}
