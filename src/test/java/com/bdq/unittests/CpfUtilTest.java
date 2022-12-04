@@ -23,6 +23,12 @@ public class CpfUtilTest{
 	}
 	
 	@Test
+	public void cpfComNumeroDeDigitosDiferenteDe11NaoEValido() {
+		boolean resultado = CpfUtil.isCPF("6373529885472");
+		assertFalse(resultado);
+	}
+	
+	@Test
 	public void cpfComCaracteresNaoNumericosNaoEValido() {
 		boolean resultado = CpfUtil.isCPF("974BRA73598");
 		assertFalse(resultado);
