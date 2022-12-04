@@ -27,6 +27,7 @@ public class BancoDeQuestoes {
 	
 	public static Double calculaMedia(List<Double> lista) {
 		Double media = 0.0;
+		if(lista.isEmpty()) return media;
 		for(Double item : lista) {
 			media+=item;
 		}

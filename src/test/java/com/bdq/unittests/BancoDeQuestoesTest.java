@@ -26,5 +26,12 @@ public class BancoDeQuestoesTest {
 		Double resultado = BancoDeQuestoes.calculaMedia(lista);
 		assertEquals(6.27,resultado,0.01);
 	}
+	
+	@Test
+	public void calculaMediaListaVazia() {
+		List<Double> lista = new ArrayList<>();
+		Double resultado = BancoDeQuestoes.calculaMedia(lista);
+		assertEquals(0.0,resultado,0.0);
+	}
 
 }
