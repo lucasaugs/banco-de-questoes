@@ -17,13 +17,13 @@ public class CpfUtilTest{
 	}
 	
 	@Test
-	public void cpfComNumeroDeDigitosDiferenteDe11NaoEValido() {
+	public void cpfComNumeroDeDigitosMenorQue11NaoEValido() {
 		boolean resultado = CpfUtil.isCPF("63735298");
 		assertFalse(resultado);
 	}
 	
 	@Test
-	public void cpfComNumeroDeDigitosDiferenteDe11NaoEValido() {
+	public void cpfComNumeroDeDigitosMaiorQue11NaoEValido() {
 		boolean resultado = CpfUtil.isCPF("6373529885472");
 		assertFalse(resultado);
 	}
