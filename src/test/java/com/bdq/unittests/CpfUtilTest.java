@@ -35,6 +35,12 @@ public class CpfUtilTest{
 	}
 	
 	@Test
+	public void cpfComoStringVaziaNaoEValido() {
+		boolean resultado = CpfUtil.isCPF("");
+		assertFalse(resultado);
+	}
+	
+	@Test
 	public void cpfValido() {
 		boolean resultado = CpfUtil.isCPF("47970631061");
 		assertTrue(resultado);
