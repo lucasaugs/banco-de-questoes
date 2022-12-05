@@ -40,4 +40,16 @@ public class QuestaoTest {
         questao.setPublica(true);
         assertTrue(questao.questaoPublica());
     }
+    
+      @Test
+     public void setEnunciadoPublica() {
+        Tema tema = new Tema("Tema", 1);
+        List<Tema> temas = new ArrayList<>();
+        temas.add(tema);
+        Questao questao = new Questao(1, "", "resposta", false, temas);
+        
+        questao.setEnunciado("teste");
+        string enunciado = questao.getEnunciado();
+        assertTrue(enunciado == "teste");
+    }
 }
