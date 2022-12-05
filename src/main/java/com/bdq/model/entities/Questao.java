@@ -81,7 +81,7 @@ public class Questao {
 	}
 	
 	public boolean questaoPublica() {
-                if (this.publica)
+                if (this.publica){
 			return true;
 		}
 		return false;
