@@ -32,12 +32,12 @@ public class QuestaoTest {
     }
     
      @Test
-    public void setQestaoPublica() {
+    public void setQuestaoPublica() {
         Tema tema = new Tema("Tema", 1);
         List<Tema> temas = new ArrayList<>();
         temas.add(tema);
         Questao questao = new Questao(1, "enuciado", "resposta", false, temas);
-        Questao.setPublica(true);
+        questao.setPublica(true);
         assertTrue(questao.questaoPublica());
     }
 }
