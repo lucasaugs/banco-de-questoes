@@ -30,4 +30,11 @@ public class QuestaoTest {
         Questao questao = new Questao(1, "enuciado", "resposta", true, temas);
         assertTrue(questao.questaoTemTema(tema));
     }
+    
+     @Test
+    public void setQestaoPublica() {
+        Questao questao = new Questao(1, "enuciado", "resposta", false, temas);
+        Questao.setPublica(true);
+        assertTrue(questao.questaoEhPublica());
+    }
 }
