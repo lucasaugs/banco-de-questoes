@@ -49,7 +49,7 @@ public class QuestaoTest {
         Questao questao = new Questao(1, "", "resposta", false, temas);
         
         questao.setEnunciado("teste");
-        string enunciado = questao.getEnunciado();
+        String enunciado = questao.getEnunciado();
         assertTrue(enunciado == "teste");
     }
 }
