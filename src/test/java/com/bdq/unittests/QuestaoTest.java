@@ -33,6 +33,9 @@ public class QuestaoTest {
     
      @Test
     public void setQestaoPublica() {
+        Tema tema = new Tema("Tema", 1);
+        List<Tema> temas = new ArrayList<>();
+        temas.add(tema);
         Questao questao = new Questao(1, "enuciado", "resposta", false, temas);
         Questao.setPublica(true);
         assertTrue(questao.questaoPublica());
