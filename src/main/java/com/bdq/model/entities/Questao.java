@@ -79,4 +79,11 @@ public class Questao {
 		}
 		return false;
 	}
+	
+	public boolean questaoEhPublica() {
+			if (this.publica))
+				return true;
+		}
+		return false;
+	}
 }
