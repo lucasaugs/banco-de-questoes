@@ -80,9 +80,9 @@ public class Questao {
 		return false;
 	}
 	
-	public boolean questaoEhPublica(Questao questao) {
-			if (questao.publica))
-				return true;
+	public boolean questaoPublica() {
+		if (this.publica))
+			return true;
 		}
 		return false;
 	}
